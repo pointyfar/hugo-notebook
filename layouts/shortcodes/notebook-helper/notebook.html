@@ -1,0 +1,37 @@
+<div class="hugo-notebook-container">
+{{ $id := print (first 5 (md5 .Page.Permalink)) "-" .Ordinal }}
+{{ $i := .Inner }}
+{{ $lang := .Get "lang" | default "go-html-template" }}
+{{ $opts := .Get "opts" | default ""  }}
+
+{{ $t := print "tmpl-" $id ".html" }}
+{{ $exec := $i | resources.FromString (print "tmp/" $t) | resources.ExecuteAsTemplate $t .Page }}
+
+<div class="hugo-notebook-tabs">
+    <div class="hugo-notebook-tab active" data-ntab="ncode-{{$id}}" data-tgroup="n{{$id}}">Code</div>
+    <div class="hugo-notebook-tab" data-ntab="nexec-{{$id}}" data-tgroup="n{{$id}}">Result</div>
+    <div class="hugo-notebook-tab" data-ntab="nhtml-{{$id}}" data-tgroup="n{{$id}}">Rendered</div>
+</div>
+<div class="hugo-notebook-wrapper">
+<div class="hugo-notebook notebook-code active" data-ngroup="n{{$id}}" id="ncode-{{$id}}">
+<div class="hugo-notebook-content">
+{{ highlight $i $lang $opts }}
+</div>
+</div>
+
+<div class="hugo-notebook notebook-exec" data-ngroup="n{{$id}}" id="nexec-{{$id}}">
+<div class="hugo-notebook-content">
+<pre><code>{{ $exec.Content }}</code></pre>
+</div>
+</div>
+
+<div class="hugo-notebook notebook-html" data-ngroup="n{{$id}}" id="nhtml-{{$id}}">
+<div class="hugo-notebook-content">
+<div>
+{{ $exec.Content | safeHTML }}
+</div>
+</div>
+</div>
+</div>
+
+</div>

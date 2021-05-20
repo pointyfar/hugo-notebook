@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Docuhelper Notebook Component"
+license = "MIT"
+licenselink = "https://github.com/pointyfar/hugo-notebook/blob/master/LICENSE"
+description = ""
+homepage = "https://github.com/pointyfar/hugo-notebook"
+tags = []
+features = []
+min_version = "0.79.0"
+
+[author]
+  name = "Pointyfar"
+  homepage = "https://github.com/pointyfar/"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""

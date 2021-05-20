@@ -1,0 +1,82 @@
+$bg1-color:      #fafafa     !default;
+$bg2-color:      #f2f2f2     !default;
+$bg3-color:      #f0f0f0     !default;
+$border-color:   #e1e1e1     !default;
+$z-base:          0           !default;
+$z-higher:        100         !default;
+
+.hugo-notebook-container {
+    code, pre code {
+        background: none;
+    }
+    .hugo-notebook-tabs {
+        display: flex;
+        flex-direction: row;
+        .hugo-notebook-tab {
+            z-index: $z-higher;
+            position: relative;
+            border: 1px solid $border-color;
+            justify-content: center;
+            align-items: center;
+            min-width: 100px;
+            padding: .5rem 1rem;
+            font-size: 75%;
+            cursor: default;
+            transition: .5s;
+            top: 1px;
+            text-transform: uppercase;
+            &.active {
+                background-color: $bg1-color;
+                border: 1px solid $border-color;
+                border-bottom: 1px solid $bg1-color;
+            }
+            &:hover {
+                transition: .5s;
+                background-color: $bg3-color;
+            }
+            &:not(:nth-child(1)){
+                border-left: 0;
+            }
+        }
+    }
+    .hugo-notebook-wrapper {
+        z-index: $z-base;
+        background-color: $bg1-color;
+        border: 1px solid $border-color;
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        align-items: stretch;
+        justify-content: stretch;
+        height: 100%;
+        margin-bottom: 4rem;
+        
+        .hugo-notebook {    
+            flex: 0 0 100%;
+            display: flex;
+            position: relative;
+            
+            overflow: hidden;
+            height: 100%;
+            order: 100;
+            opacity: 0;
+            &.active {
+                order: 10;
+                left: 0;
+                transition: .5s;
+                opacity: 1;
+            }
+            .hugo-notebook-content {
+                height: 100%;
+                overflow: auto;
+                position: relative;
+                
+            }
+            .hugo-notebook-tab {
+                background-color: $bg2-color;
+            }
+        }
+    }
+}
