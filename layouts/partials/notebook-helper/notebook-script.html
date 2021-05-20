@@ -1,0 +1,4 @@
+{{ $nhjs := resources.Get "notebook-helper/script.js" }}
+<script>
+    {{ $nhjs.Content  | safeJS }}
+</script>

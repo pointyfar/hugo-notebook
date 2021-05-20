@@ -1,0 +1,2 @@
+{{ $nhcss := resources.Get "notebook-helper/style.scss" | resources.toCSS }}
+<link rel="stylesheet" href="{{$nhcss.Permalink}}" >
