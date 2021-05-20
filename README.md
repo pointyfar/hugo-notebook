@@ -4,11 +4,11 @@
 
 A notebook-inspired component
 
-![https://raw.githubusercontent.com/pointyfar/hugo-notebook/master/images/code.png](Screenshot)
+![Screenshot](https://raw.githubusercontent.com/pointyfar/hugo-notebook/master/images/code.png)
 
-![https://raw.githubusercontent.com/pointyfar/hugo-notebook/master/images/result.png](Screenshot)
+![Screenshot](https://raw.githubusercontent.com/pointyfar/hugo-notebook/master/images/result.png)
 
-![https://raw.githubusercontent.com/pointyfar/hugo-notebook/master/images/rendered.png](Screenshot)
+![Screenshot](https://raw.githubusercontent.com/pointyfar/hugo-notebook/master/images/rendered.png)
 
 ## Why
 
