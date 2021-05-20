@@ -4,6 +4,12 @@
 
 A notebook-inspired component
 
+![https://raw.githubusercontent.com/pointyfar/hugo-notebook/master/images/code.png](Screenshot)
+
+![https://raw.githubusercontent.com/pointyfar/hugo-notebook/master/images/result.png](Screenshot)
+
+![https://raw.githubusercontent.com/pointyfar/hugo-notebook/master/images/rendered.png](Screenshot)
+
 ## Why
 
 I needed one, and I thought it might be useful to others as well.
