@@ -34,7 +34,7 @@ by calling the partial:
 
 ```
 {{ if .HasShortcode "notebook-helper/notebook" }}
-    {{ partial "notebook-helper/notebook" . }}
+    {{ partial "notebook-helper/notebook-script" . }}
 {{ end }}
 ```
 
